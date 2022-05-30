@@ -3,7 +3,8 @@ import chalk from "chalk";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import categoriesRouter from "./../routes/categoriesRouter.js";
+import categoriesRouter from "../routers/categoriesRouter.js";
+import gamesRouter from "../routers/gamesRouter.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(json());
 
 app.use(categoriesRouter);
+app.use(gamesRouter);
 
 const PORT = process.env.PORT || 4000;
 
